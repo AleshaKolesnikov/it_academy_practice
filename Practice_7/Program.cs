@@ -6,8 +6,7 @@ namespace Practice_7
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-
+            Console.WriteLine("Hello");
         }
         public static void Task1()
         {
@@ -35,6 +34,31 @@ namespace Practice_7
             {
                 Console.WriteLine(output2);
             }
+        }
+        public static void Task3()
+        {
+            int[] array = new int[13];
+            Random rnd = new Random();
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = rnd.Next();
+            }
+            int current = 0;
+            for (int i = 0; i < array.Length; i++)
+            {
+                for (int j = 1; j < array.Length; j++)
+                {
+                    if (array[i] > array[j])
+                    {
+                        current = array[i];
+                    }
+                }
+            }
+            foreach (int nums in array)
+            {
+                Console.WriteLine(nums);
+            }
+            Console.WriteLine($"Наибольшее число - {current}");
         }
     }
 }
