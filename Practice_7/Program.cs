@@ -60,5 +60,9 @@ namespace Practice_7
             }
             Console.WriteLine($"Наибольшее число - {current}");
         }
+        public static void Task4()
+        {
+
+        }
     }
 }
