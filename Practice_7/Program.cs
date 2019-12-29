@@ -6,11 +6,14 @@ namespace Practice_7
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello");
+            Task1();
         }
         public static void Task1()
         {
-            //массив всегда будет иметь содержимое по умолчанию
+            // Оказывается, можно)
+            int[] array = new int[0];
+            int arrayLength = array.Length;
+            Console.WriteLine($"Длинна массива - {arrayLength}");
 
         }
         public static void Task2()
