@@ -8,10 +8,13 @@ namespace Practice_7
         {
             Task1();
             Task2();
+            Task3();
+            Task4();
         }
         public static void Task1()
         {
             // Оказывается, можно)
+            Console.WriteLine("Task1:");
             int[] array = new int[0];
             int arrayLength = array.Length;
             Console.WriteLine($"Длинна массива - {arrayLength}");
@@ -19,6 +22,7 @@ namespace Practice_7
         }
         public static void Task2()
         {
+            Console.WriteLine("\nTask2:");
             object[] array = new object[3];
             int num1 = 32;
             array[0] = num1;
@@ -37,6 +41,7 @@ namespace Practice_7
         }
         public static void Task3()
         {
+            Console.WriteLine("\nTask3:");
             int[] array = new int[13];
             Random rnd = new Random();
             for (int i = 0; i < array.Length; i++)
@@ -62,6 +67,12 @@ namespace Practice_7
         }
         public static void Task4()
         {
+            Console.WriteLine("\nTask4:");
+            short num1 = 10;
+            object box1 = num1;
+            sbyte unbox = (sbyte)(short)box1;
+            Console.WriteLine(unbox);
+            Console.WriteLine(unbox.GetType());
 
         }
     }
