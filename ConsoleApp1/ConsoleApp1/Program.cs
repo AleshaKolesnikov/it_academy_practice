@@ -1,68 +1,26 @@
 ﻿using System;
+using FigureAreaTask.BasicClasses;
+using FigureAreaTask.Figures;
 
-namespace Practice
+namespace FigureAreaTask
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Random rnd1 = new Random();
-            int lengthOrWidth = rnd1.Next(1, 10);
-            Random rnd2 = new Random();
-            int height = rnd1.Next(1, 10);
+            Random random = new Random();
+            Figure[] figures = new Figure[5];
 
-            Rectangle rectangle = new Rectangle(lengthOrWidth, height);
-            Square square = new Square(lengthOrWidth);
-            Circle circle = new Circle(lengthOrWidth);
+            figures[0] = new Square(random.Next(1, 10));
+            figures[1] = new Circle(random.Next(1, 10));
+            figures[2] = new Triangle(random.Next(1, 10));
+            figures[3] = new Circle(random.Next(1, 10));
+            figures[4] = new Triangle(random.Next(1, 10));
 
-            Figure[] array = new Figure[5];
-            for (int i = 0; i < array.Length; i++)
+            for (int i = 0; i < figures.Length; i++)
             {
-                array[i] =
+                Console.WriteLine($"This is {figures[i].Name}, CLR Type is {figures[i]}, Area is {figures[i].Area()}");
             }
-        }
-    }
-    abstract class Figure
-    {
-        public abstract float Area();
-    }
-    class Rectangle : Figure
-    {
-        public float Width { get; set; }
-        public float Height { get; set; }
-
-        public Rectangle(float width, float height)
-        {
-            this.Width = width;
-            this.Height = height;
-        }
-        public override float Area()
-        {
-            return Width * Height / 2;
-        }
-    }
-    class Square : Figure
-    {
-        public float Length { get; set; }
-        public Square(float length)
-        {
-            this.Length = length;
-        }
-        public override float Area()
-        {
-            return Length * Length;
-        }
-    }
-    class Circle : Figure
-    {
-        public float Radius { get; set; }
-        public Circle(float radius)
-        {
-            this.Radius = radius;
-        }
-        public override float Area()
-        {
-            return Radius * Radius * 3.14F;
         }
     }
 }
