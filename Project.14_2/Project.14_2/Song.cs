@@ -10,5 +10,9 @@ namespace Project._14_2
         int SongMinutes { get;set; }
         string SongAuthor { get; set; }
         int SongAlbumYear { get; set; }
+        public void GetSongData(Song song)
+        {
+
+        }
     }
 }
