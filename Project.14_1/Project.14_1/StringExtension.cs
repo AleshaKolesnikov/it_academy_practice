@@ -16,7 +16,7 @@ namespace Project._14_1
         }
 
         // SECOND.
-        // This method not uses second parameter in itself, but it works the same
+        // This method doesn't use second parameter in itself, but it works the same
 
         public static string StringChange(this String str, object anything)
         {
