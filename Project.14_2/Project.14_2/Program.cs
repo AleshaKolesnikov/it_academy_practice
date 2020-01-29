@@ -7,7 +7,9 @@ namespace Project._14_2
         static void Main(string[] args)
         {
             Song song = new Song();
-            song.GetSongData();
+            song.SongName = Console.ReadLine();
+
+            
         }
     }
 }
